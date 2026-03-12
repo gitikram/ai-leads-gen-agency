@@ -7,7 +7,7 @@ const trustedBy = [
   { name: "Startup", italic: false },
   { name: "Institute", italic: true },
   { name: "Organization", italic: false },
-  { name: "Enterprise", italic: true },
+  { name: "Institute", italic: true },
   { name: "Business", italic: false },
   { name: "Capital", italic: true },
 ];
@@ -15,13 +15,13 @@ const trustedBy = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
-      {/* Video Background */}
+      {/* Video Background - high visibility */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-80"
+        className="absolute inset-0 w-full h-full object-cover"
       >
         <source
           src="https://res.cloudinary.com/dm1zvc99k/video/upload/v1773302884/red-blob-animation_ar043d.mp4"
@@ -29,54 +29,52 @@ const HeroSection = () => {
         />
       </video>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-background/40" />
+      {/* Subtle overlay for text readability */}
+      <div className="absolute inset-0 bg-background/20" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Nav */}
-        <nav className="flex items-center justify-between px-6 md:px-12 lg:px-20 py-6">
-          <span className="text-foreground font-body text-xl font-semibold tracking-tight">
+        {/* Floating Centered Nav */}
+        <nav className="mx-auto mt-4 md:mt-6 w-[92%] max-w-5xl rounded-full border border-foreground/10 bg-background/30 backdrop-blur-md px-6 md:px-8 py-3 flex items-center justify-between">
+          <span className="text-foreground font-body text-base font-medium tracking-tight">
             LeadGenAI
           </span>
-          <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground font-body">
+          <div className="hidden md:flex items-center gap-7 text-sm text-foreground/70 font-body font-light">
             <a href="#" className="hover:text-foreground transition-colors">Services</a>
             <a href="#" className="hover:text-foreground transition-colors">Case Studies</a>
             <a href="#" className="hover:text-foreground transition-colors">About</a>
             <a href="#" className="hover:text-foreground transition-colors">Contact</a>
           </div>
-          <button className="rounded-full border border-border px-5 py-2 text-sm text-foreground font-body hover:bg-secondary transition-colors">
+          <button className="rounded-full border border-foreground/20 px-5 py-1.5 text-sm text-foreground font-body font-light hover:bg-foreground/10 transition-colors">
             Get Started
           </button>
         </nav>
 
         {/* Hero Content */}
-        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-32">
+        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-28">
           <div className="flex items-end justify-between w-full max-w-[1400px] mx-auto">
             <div className="max-w-3xl">
               <motion.h1
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight font-body"
+                className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[1.05] tracking-tight font-body"
               >
                 We are a{" "}
-                <span className="font-display italic font-bold text-primary">creative</span>
+                <span className="font-display italic font-normal">creative</span>
                 <br />
-                AI lead gen
+                design studio from
                 <br />
-                agency from
-                <br />
-                <span className="font-display italic font-bold text-primary">San Francisco</span>
+                <span className="font-display italic font-normal">San Francisco</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-8 text-muted-foreground text-base md:text-lg max-w-lg leading-relaxed font-body"
+                className="mt-8 text-foreground/60 text-base md:text-lg max-w-md leading-relaxed font-body font-light"
               >
-                We leverage cutting-edge AI to identify, qualify, and convert your ideal prospects into paying customers at scale.
+                Lorem ipsum dolor sit amet consectetur ut cras scelerisque diam rutrum dui nisl sed ultricies ac eu sed gravida diam felis tellus cursus amet sit.
               </motion.p>
             </div>
 
@@ -89,17 +87,17 @@ const HeroSection = () => {
             >
               <a
                 href="#"
-                className="w-32 h-32 xl:w-40 xl:h-40 rounded-full border-2 border-foreground/30 flex items-center justify-center hover:border-primary hover:scale-105 transition-all duration-300 group"
+                className="w-28 h-28 xl:w-36 xl:h-36 rounded-full border border-foreground/40 flex items-center justify-center hover:border-foreground hover:scale-105 transition-all duration-300 group"
               >
-                <ArrowUpRight className="w-10 h-10 xl:w-12 xl:h-12 text-foreground group-hover:text-primary transition-colors" />
+                <ArrowUpRight className="w-8 h-8 xl:w-10 xl:h-10 text-foreground/70 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
               </a>
             </motion.div>
           </div>
         </div>
 
         {/* Trusted By Marquee */}
-        <div className="relative z-10 border-t border-border/50 py-6">
-          <p className="text-center text-sm text-muted-foreground font-body mb-4 tracking-widest uppercase">
+        <div className="relative z-10 border-t border-foreground/10 py-5">
+          <p className="text-center text-xs text-foreground/50 font-body font-light mb-4 tracking-[0.2em] uppercase">
             Trusted by
           </p>
           <div className="overflow-hidden">
@@ -107,15 +105,15 @@ const HeroSection = () => {
               {[...trustedBy, ...trustedBy].map((item, i) => (
                 <span key={i} className="flex items-center">
                   <span
-                    className={`text-xl md:text-2xl mx-4 ${
+                    className={`text-lg md:text-2xl mx-4 ${
                       item.italic
-                        ? "font-display italic text-primary"
-                        : "font-body font-light text-foreground"
+                        ? "font-display italic text-primary font-normal"
+                        : "font-body font-extralight text-foreground/80"
                     }`}
                   >
                     {item.name}
                   </span>
-                  <span className="text-muted-foreground mx-4">/</span>
+                  <span className="text-foreground/30 mx-4 font-extralight">/</span>
                 </span>
               ))}
             </div>
