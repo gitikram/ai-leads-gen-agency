@@ -76,6 +76,17 @@ const HeroSection = () => {
               >
                 Lorem ipsum dolor sit amet consectetur ut cras scelerisque diam rutrum dui nisl sed ultricies ac eu sed gravida diam felis tellus cursus amet sit.
               </motion.p>
+
+              <motion.a
+                href="#"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-body font-medium text-primary-foreground hover:bg-primary/85 transition-colors"
+              >
+                Schedule a Call
+                <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
+              </motion.a>
             </div>
 
             {/* Circle CTA */}
