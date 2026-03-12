@@ -57,7 +57,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extralight leading-[1.05] tracking-tight font-body"
+                className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extralight leading-[1.05] tracking-tight font-heading"
               >
                 Your{" "}
                 <span className="font-display italic font-normal">Trusted</span>{" "}AI
