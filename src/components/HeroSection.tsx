@@ -51,7 +51,7 @@ const HeroSection = () => {
         </nav>
 
         {/* Hero Content */}
-        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-28">
+        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pt-20 md:pt-28 pb-28">
           <div className="flex items-end justify-between w-full max-w-[1400px] mx-auto">
             <div className="max-w-3xl">
               <motion.h1
