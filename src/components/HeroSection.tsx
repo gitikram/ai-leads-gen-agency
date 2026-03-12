@@ -51,7 +51,7 @@ const HeroSection = () => {
         </nav>
 
         {/* Hero Content */}
-        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-28">
+        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pt-20 md:pt-28 pb-28">
           <div className="flex items-end justify-between w-full max-w-[1400px] mx-auto">
             <div className="max-w-3xl">
               <motion.h1
@@ -76,6 +76,17 @@ const HeroSection = () => {
               >
                 Lorem ipsum dolor sit amet consectetur ut cras scelerisque diam rutrum dui nisl sed ultricies ac eu sed gravida diam felis tellus cursus amet sit.
               </motion.p>
+
+              <motion.a
+                href="#"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-body font-medium text-primary-foreground hover:bg-primary/85 transition-colors"
+              >
+                Schedule a Call
+                <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
+              </motion.a>
             </div>
 
             {/* Circle CTA */}
@@ -107,8 +118,8 @@ const HeroSection = () => {
                   <span
                     className={`text-lg md:text-2xl mx-4 ${
                       item.italic
-                        ? "font-display italic text-primary font-normal"
-                        : "font-body font-extralight text-foreground/80"
+                        ? "font-display italic text-foreground font-bold"
+                        : "font-body font-light text-foreground"
                     }`}
                   >
                     {item.name}
