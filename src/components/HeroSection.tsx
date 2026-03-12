@@ -15,7 +15,7 @@ const trustedBy = [
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
-      {/* Video Background - high visibility */}
+      {/* Video Background */}
       <video
         autoPlay
         muted
@@ -29,7 +29,6 @@ const HeroSection = () => {
         />
       </video>
 
-      {/* Subtle overlay for text readability */}
       <div className="absolute inset-0 bg-background/20" />
 
       {/* Content */}
@@ -50,8 +49,8 @@ const HeroSection = () => {
           </button>
         </nav>
 
-        {/* Hero Content */}
-        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pb-28">
+        {/* Hero Content - extra top padding for clear spacing */}
+        <div className="flex-1 flex items-center px-6 md:px-12 lg:px-20 pt-16 md:pt-24 pb-28">
           <div className="flex items-end justify-between w-full max-w-[1400px] mx-auto">
             <div className="max-w-3xl">
               <motion.h1
@@ -60,12 +59,13 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[1.05] tracking-tight font-body"
               >
-                We are a{" "}
-                <span className="font-display italic font-normal">creative</span>
+                Your Trusted{" "}
+                <span className="font-display italic font-normal">AI</span>
                 <br />
-                design studio from
+                Lead Gen Agency
                 <br />
-                <span className="font-display italic font-normal">San Francisco</span>
+                at Your{" "}
+                <span className="font-display italic font-normal">Door</span>
               </motion.h1>
 
               <motion.p
@@ -74,8 +74,23 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 className="mt-8 text-foreground/60 text-base md:text-lg max-w-md leading-relaxed font-body font-light"
               >
-                Lorem ipsum dolor sit amet consectetur ut cras scelerisque diam rutrum dui nisl sed ultricies ac eu sed gravida diam felis tellus cursus amet sit.
+                We help businesses scale with AI-powered lead generation strategies that deliver qualified prospects straight to your pipeline.
               </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="mt-10"
+              >
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-primary-foreground font-body text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Schedule a Call
+                  <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
+                </a>
+              </motion.div>
             </div>
 
             {/* Circle CTA */}
@@ -107,13 +122,13 @@ const HeroSection = () => {
                   <span
                     className={`text-lg md:text-2xl mx-4 ${
                       item.italic
-                        ? "font-display italic text-primary font-normal"
-                        : "font-body font-extralight text-foreground/80"
+                        ? "font-display italic text-foreground font-bold"
+                        : "font-body font-normal text-foreground"
                     }`}
                   >
                     {item.name}
                   </span>
-                  <span className="text-foreground/30 mx-4 font-extralight">/</span>
+                  <span className="text-foreground/50 mx-4 font-extralight">/</span>
                 </span>
               ))}
             </div>
