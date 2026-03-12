@@ -118,8 +118,8 @@ const HeroSection = () => {
                   <span
                     className={`text-lg md:text-2xl mx-4 ${
                       item.italic
-                        ? "font-display italic text-primary font-normal"
-                        : "font-body font-extralight text-foreground/80"
+                        ? "font-display italic text-foreground font-bold"
+                        : "font-body font-light text-foreground"
                     }`}
                   >
                     {item.name}
