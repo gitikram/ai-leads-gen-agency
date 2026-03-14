@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 const trustedBy = [
-  { name: "Agency", italic: false },
-  { name: "Venture", italic: true },
-  { name: "Startup", italic: false },
-  { name: "Institute", italic: true },
-  { name: "Organization", italic: false },
-  { name: "Institute", italic: true },
-  { name: "Business", italic: false },
-  { name: "Capital", italic: true },
-];
+{ name: "Agency", italic: false },
+{ name: "Venture", italic: true },
+{ name: "Startup", italic: false },
+{ name: "Institute", italic: true },
+{ name: "Organization", italic: false },
+{ name: "Institute", italic: true },
+{ name: "Business", italic: false },
+{ name: "Capital", italic: true }];
+
 
 const HeroSection = () => {
   return (
@@ -21,12 +21,12 @@ const HeroSection = () => {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
+        className="absolute inset-0 w-full h-full object-cover">
+        
         <source
           src="https://res.cloudinary.com/dm1zvc99k/video/upload/v1773302884/red-blob-animation_ar043d.mp4"
-          type="video/mp4"
-        />
+          type="video/mp4" />
+        
       </video>
 
       {/* Subtle overlay for text readability */}
@@ -58,10 +58,10 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[1.05] tracking-tight font-body"
-              >
+                className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[1.05] tracking-tight font-body">
+                
                 We are a{" "}
-                <span className="font-display italic font-normal">creative</span>
+                <span className="font-display italic font-normal">trusted</span>
                 <br />
                 design studio from
                 <br />
@@ -72,8 +72,8 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-8 text-foreground/60 text-base md:text-lg max-w-md leading-relaxed font-body font-light"
-              >
+                className="mt-8 text-foreground/60 text-base md:text-lg max-w-md leading-relaxed font-body font-light">
+                
                 Lorem ipsum dolor sit amet consectetur ut cras scelerisque diam rutrum dui nisl sed ultricies ac eu sed gravida diam felis tellus cursus amet sit.
               </motion.p>
 
@@ -82,8 +82,8 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-body font-medium text-primary-foreground hover:bg-primary/85 transition-colors"
-              >
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-body font-medium text-primary-foreground hover:bg-primary/85 transition-colors">
+                
                 Schedule a Call
                 <ArrowUpRight className="w-4 h-4" strokeWidth={2} />
               </motion.a>
@@ -94,12 +94,12 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="hidden lg:flex"
-            >
+              className="hidden lg:flex">
+              
               <a
                 href="#"
-                className="w-28 h-28 xl:w-36 xl:h-36 rounded-full border border-foreground/40 flex items-center justify-center hover:border-foreground hover:scale-105 transition-all duration-300 group"
-              >
+                className="w-28 h-28 xl:w-36 xl:h-36 rounded-full border border-foreground/40 flex items-center justify-center hover:border-foreground hover:scale-105 transition-all duration-300 group">
+                
                 <ArrowUpRight className="w-8 h-8 xl:w-10 xl:h-10 text-foreground/70 group-hover:text-foreground transition-colors" strokeWidth={1.5} />
               </a>
             </motion.div>
@@ -107,32 +107,32 @@ const HeroSection = () => {
         </div>
 
         {/* Trusted By Marquee */}
-        <div className="relative z-10 border-t border-foreground/10 py-5">
+        <div className="relative z-10 border-t border-foreground/10 py-5 mx-0">
           <p className="text-center text-xs text-foreground/50 font-body font-light mb-4 tracking-[0.2em] uppercase">
             Trusted by
           </p>
           <div className="overflow-hidden">
             <div className="flex animate-marquee whitespace-nowrap">
-              {[...trustedBy, ...trustedBy].map((item, i) => (
-                <span key={i} className="flex items-center">
+              {[...trustedBy, ...trustedBy].map((item, i) =>
+              <span key={i} className="flex items-center">
                   <span
-                    className={`text-lg md:text-2xl mx-4 ${
-                      item.italic
-                        ? "font-display italic text-foreground font-bold"
-                        : "font-body font-light text-foreground"
-                    }`}
-                  >
+                  className={`text-lg md:text-2xl mx-4 ${
+                  item.italic ?
+                  "font-display italic text-foreground font-bold" :
+                  "font-body font-light text-foreground"}`
+                  }>
+                  
                     {item.name}
                   </span>
                   <span className="text-foreground/30 mx-4 font-extralight">/</span>
                 </span>
-              ))}
+              )}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
