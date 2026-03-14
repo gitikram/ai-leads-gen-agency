@@ -60,10 +60,9 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="text-foreground text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[1.05] tracking-tight font-body">
                 
-                We are a{" "}
-                <span className="font-display italic font-normal">trusted</span>
+                The best AI lead gen
                 <br />
-                design studio from
+                agency from
                 <br />
                 <span className="font-display italic font-normal">San Francisco</span>
               </motion.h1>
